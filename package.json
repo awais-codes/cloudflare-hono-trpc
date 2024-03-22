@@ -14,5 +14,9 @@
     "typescript": "^5.0.4",
     "vitest": "1.3.0",
     "wrangler": "^3.0.0"
+  },
+  "dependencies": {
+    "@trpc/server": "^10.45.2",
+    "hono": "^4.1.3"
   }
 }
