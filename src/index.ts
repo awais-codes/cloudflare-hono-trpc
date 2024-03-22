@@ -1,5 +1,5 @@
 import { Hono } from 'hono';
-import { appRouter } from './router';
+import { appRouter } from './trpc/router';
 import { honoTRPCServer } from './trpc/hono-adapter';
 
 const TRPC_ENTRYPOINT_ROUTE = '/trpc';
