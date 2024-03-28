@@ -7,7 +7,7 @@ const userInputSchemas = {
     signup: insertUserSchema.omit({ id: true })
 }
 
-export const useRouter = router({
+export const userRouter = router({
     signup: publicProcedure.input(userInputSchemas.signup).mutation(async (opts) => {
         const { input, ctx } = opts
         const userClass = new User(ctx.db)
