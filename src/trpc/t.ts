@@ -1,10 +1,11 @@
 import { initTRPC } from '@trpc/server';
+import { ExtendedContext } from './hono-adapter';
 
 /**
  * Initialization of tRPC backend
  * Should be done only once per backend!
  */
-const t = initTRPC.create();
+const t = initTRPC.context<ExtendedContext>().create();
 
 /**
  * Export reusable router and procedure helpers
@@ -13,3 +14,4 @@ const t = initTRPC.create();
 export const router = t.router;
 export const publicProcedure = t.procedure;
 export const mergeRouters = t.mergeRouters;
+export const createCallerFactory = t.createCallerFactory
