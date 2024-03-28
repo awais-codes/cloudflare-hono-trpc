@@ -4,7 +4,7 @@ import {
     InsertUser,
     users as UserTable,
 } from '../../db/schema';
-import { getDB } from '../../trpc/hono-adapter';
+import { getDB } from '../../trpc/context';
 
 export class User {
     private db: DrizzleClient;

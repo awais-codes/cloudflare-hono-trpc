@@ -1,5 +1,5 @@
 import { initTRPC } from '@trpc/server';
-import { ExtendedContext } from './hono-adapter';
+import { ExtendedContext } from './context';
 
 /**
  * Initialization of tRPC backend
